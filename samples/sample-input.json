@@ -1,0 +1,21 @@
+{
+  "product": {
+    "repository": "project-input-intake-workbench",
+    "title": "入力・取り込みワークベンチ"
+  },
+  "items": [
+    {
+      "id": "project-input-intake-workbench-happy",
+      "title": "入力・取り込みワークベンチ happy",
+      "status": "ready",
+      "tags": [
+        "projectmanagement"
+      ],
+      "source": "samples/happy.json",
+      "owner": "closed-alpha",
+      "priority": "P2",
+      "acceptance": "代表シナリオの期待結果と一致する",
+      "reviewNote": "入力・取り込みワークベンチ の確認観点"
+    }
+  ]
+}

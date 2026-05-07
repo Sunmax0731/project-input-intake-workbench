@@ -1,0 +1,120 @@
+[
+  {
+    "id": "happy-path",
+    "purpose": "入力・取り込みワークベンチ の正常入力を検証する",
+    "items": [
+      {
+        "id": "project-input-intake-workbench-happy",
+        "title": "入力・取り込みワークベンチ happy",
+        "status": "ready",
+        "tags": [
+          "projectmanagement"
+        ],
+        "source": "samples/happy.json",
+        "owner": "closed-alpha",
+        "priority": "P2",
+        "acceptance": "代表シナリオの期待結果と一致する",
+        "reviewNote": "入力・取り込みワークベンチ の確認観点"
+      }
+    ],
+    "expected": {
+      "result": "passed",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "id": "missing-required",
+    "purpose": "必須項目不足を error として検出する",
+    "items": [
+      {
+        "id": "project-input-intake-workbench-missing",
+        "status": "ready",
+        "tags": [
+          "projectmanagement"
+        ],
+        "source": "samples/missing.json",
+        "owner": "closed-alpha",
+        "priority": "P2",
+        "acceptance": "代表シナリオの期待結果と一致する",
+        "reviewNote": "入力・取り込みワークベンチ の確認観点"
+      }
+    ],
+    "expected": {
+      "result": "failed",
+      "errors": 1,
+      "warnings": 0
+    }
+  },
+  {
+    "id": "warning",
+    "purpose": "推奨項目不足を warning として検出する",
+    "items": [
+      {
+        "id": "project-input-intake-workbench-warning",
+        "title": "入力・取り込みワークベンチ warning",
+        "status": "ready",
+        "tags": [
+          "projectmanagement"
+        ],
+        "source": "samples/warning.json",
+        "owner": "closed-alpha",
+        "priority": "P2",
+        "acceptance": "代表シナリオの期待結果と一致する"
+      }
+    ],
+    "expected": {
+      "result": "warning",
+      "errors": 0,
+      "warnings": 1
+    }
+  },
+  {
+    "id": "mixed-batch",
+    "purpose": "正常、必須不足、警告を同一バッチで集計する",
+    "items": [
+      {
+        "id": "project-input-intake-workbench-happy",
+        "title": "入力・取り込みワークベンチ happy",
+        "status": "ready",
+        "tags": [
+          "projectmanagement"
+        ],
+        "source": "samples/happy.json",
+        "owner": "closed-alpha",
+        "priority": "P2",
+        "acceptance": "代表シナリオの期待結果と一致する",
+        "reviewNote": "入力・取り込みワークベンチ の確認観点"
+      },
+      {
+        "id": "project-input-intake-workbench-missing",
+        "status": "ready",
+        "tags": [
+          "projectmanagement"
+        ],
+        "source": "samples/missing.json",
+        "owner": "closed-alpha",
+        "priority": "P2",
+        "acceptance": "代表シナリオの期待結果と一致する",
+        "reviewNote": "入力・取り込みワークベンチ の確認観点"
+      },
+      {
+        "id": "project-input-intake-workbench-warning",
+        "title": "入力・取り込みワークベンチ warning",
+        "status": "ready",
+        "tags": [
+          "projectmanagement"
+        ],
+        "source": "samples/warning.json",
+        "owner": "closed-alpha",
+        "priority": "P2",
+        "acceptance": "代表シナリオの期待結果と一致する"
+      }
+    ],
+    "expected": {
+      "result": "failed",
+      "errors": 1,
+      "warnings": 1
+    }
+  }
+]
