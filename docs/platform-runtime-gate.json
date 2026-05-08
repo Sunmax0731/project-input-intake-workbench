@@ -1,0 +1,11 @@
+{
+  "product": "project-input-intake-workbench",
+  "title": "入力・取り込みワークベンチ",
+  "domain": "ProjectManagement",
+  "ideaNo": 3,
+  "platformType": "cli-release-tool",
+  "expectedPublicTarget": "GitHub Release",
+  "browser": null,
+  "android": null,
+  "evidence": "dist/platform-runtime-gate-result.json"
+}
